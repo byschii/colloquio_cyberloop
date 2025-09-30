@@ -3,10 +3,23 @@
 Implementare un prototipo di TODO List Web App utilizzando lo stack tecnologico nextjs, shadcn/ui, jotai.
 È sufficiente implementare un’unica pagina, poiché la valutazione non dipenderà dalla completezza dell’applicativo ma dalla qualità della pagina/funzionalità implementata.
 
+PER ESECUIRE:
+```
+cd ES1
+turbo run dev
+```
+
 # Esercizio 2 Refactoring Web App
 Partire dal risultato dell’Esercizio 1, farne una copia, e rifattorizzare il codice.
 Portarlo ad un pattern mono-repo tramite lo strumento turborepo, spostando i componenti riusabili all’interno di un nuovo package dedicato.
 L’obiettivo è migliorarne: ordine, chiarezza, riusabilità, manutenibilità, immediatezza, resilienza ad errori.
+
+PER ESEGUIRE
+```
+cd ES2
+turbo run dev
+```
+
 
 # Esercizio 3 Generazione di dati di test
 Considerare la struttura dati seguente, relativa ai dati salvati per un’azienda, incluso il relativo personale, generare dei dati di test con almeno 5000 entry
@@ -58,6 +71,12 @@ Considerare la struttura dati seguente, relativa ai dati salvati per un’aziend
     export type Company = z.input<typeof companySchema>;
 
     export const companiesSchema = z.array(companySchema);
+```
+
+PER ESEGUIRE:
+```
+cd ES3
+npm test
 ```
 
 # ALTRO
