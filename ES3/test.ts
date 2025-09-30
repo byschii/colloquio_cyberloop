@@ -4,4 +4,9 @@ import { generateMock } from "@anatine/zod-mock";
 
 const sample = generateMock(companySchema); // valid example
 
-console.log("Sample Company:", sample);
+const N_EXAMPLES = 5000;
+
+for (let i = 0; i < N_EXAMPLES; i++) {
+    const sample = generateMock(companySchema); // valid example
+    console.log(`Sample Company ${i + 1}:`, sample);
+}

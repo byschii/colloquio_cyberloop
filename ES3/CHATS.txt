@@ -1,0 +1,78 @@
+Module '"@anatine/zod-mock"' has no exported member 'mock'.ts(2305)
+
+can you fix it?
+
+I'll help you fix the import error with the @anatine/zod-mock library. Let me first check the library's documentation and then fix the import statement.
+
+
+npm info @anatine/zod-mock
+Let me check the actual module structure by looking at the installed package:
+
+
+ls -la node_modules/@anatine/zod-mock/
+Auto approved by rule ls
+
+Let me check if node_modules exists and install the package properly:
+
+
+ls -la
+Auto approved by rule ls
+
+
+ls -la ES3/
+Auto approved by rule ls
+
+Now let me check the @anatine/zod-mock package structure:
+
+
+cd ES3 && ls -la node_modules/@anatine/zod-mock/
+Auto approved by rules cd, ls
+
+
+cd ES3 && cat node_modules/@anatine/zod-mock/package.json
+Auto approved by rules cd, cat
+
+
+cat ES3/node_modules/@anatine/zod-mock/package.json
+Auto approved by rule cat
+
+Let me change to the ES3 directory first:
+
+
+cd /home/byschii/byschiidev/colloquio/ES3
+Auto approved by rule cd
+
+
+cat node_modules/@anatine/zod-mock/package.json
+Auto approved by rule cat
+
+Now let me check the main index file to see the exports:
+
+
+cat node_modules/@anatine/zod-mock/src/index.js
+Auto approved by rule cat
+
+Let me check the TypeScript definitions:
+
+
+cat node_modules/@anatine/zod-mock/src/index.d.ts
+Auto approved by rule cat
+
+Now let me check the actual zod-mock library file:
+
+
+cat node_modules/@anatine/zod-mock/src/lib/zod-mock.d.ts
+Auto approved by rule cat
+
+Perfect! I can see that the function is called generateMock, not mock. Let me also check if there are other exports by looking at the README:
+
+
+head -50 node_modules/@anatine/zod-mock/README.md
+Auto approved by rule head
+
+Great! Now I understand the issue. The correct export is generateMock, not mock. Let me fix the import in the test.ts file:
+
+test.ts+2-2
+The issue has been fixed! The problem was that the @anatine/zod-mock library exports a function called generateMock, not mock. I've updated the import statement to use the correct function name.
+
+The corrected code now imports generateMock from @anatine/zod-mock and uses it to generate mock data from your companySchema. This should resolve the TypeScript error you were seeing.
