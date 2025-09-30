@@ -17,15 +17,9 @@ importers:
 
   apps/web:
     dependencies:
-      '@radix-ui/react-slot':
-        specifier: ^1.1.0
-        version: 1.2.3(@types/react@18.3.25)(react@18.3.1)
-      class-variance-authority:
-        specifier: ^0.7.0
-        version: 0.7.1
-      clsx:
-        specifier: ^2.1.1
-        version: 2.1.1
+      '@repo/ui':
+        specifier: workspace:*
+        version: link:../../packages/ui
       jotai:
         specifier: ^2.10.4
         version: 2.15.0(@types/react@18.3.25)(react@18.3.1)
@@ -38,12 +32,6 @@ importers:
       react-dom:
         specifier: ^18.3.1
         version: 18.3.1(react@18.3.1)
-      tailwind-merge:
-        specifier: ^2.5.2
-        version: 2.6.0
-      tailwindcss-animate:
-        specifier: ^1.0.7
-        version: 1.0.7(tailwindcss@3.4.17)
     devDependencies:
       '@types/node':
         specifier: ^22.5.0
@@ -69,6 +57,49 @@ importers:
       tailwindcss:
         specifier: ^3.4.10
         version: 3.4.17
+      typescript:
+        specifier: ^5.5.4
+        version: 5.9.2
+
+  packages/ui:
+    dependencies:
+      '@radix-ui/react-slot':
+        specifier: ^1.1.0
+        version: 1.2.3(@types/react@18.3.25)(react@18.3.1)
+      class-variance-authority:
+        specifier: ^0.7.0
+        version: 0.7.1
+      clsx:
+        specifier: ^2.1.1
+        version: 2.1.1
+      react:
+        specifier: ^18.3.1
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.3.1
+        version: 18.3.1(react@18.3.1)
+      tailwind-merge:
+        specifier: ^2.5.2
+        version: 2.6.0
+    devDependencies:
+      '@types/react':
+        specifier: ^18.3.4
+        version: 18.3.25
+      '@types/react-dom':
+        specifier: ^18.3.0
+        version: 18.3.7(@types/react@18.3.25)
+      autoprefixer:
+        specifier: ^10.4.20
+        version: 10.4.21(postcss@8.5.6)
+      postcss:
+        specifier: ^8.4.41
+        version: 8.5.6
+      tailwindcss:
+        specifier: ^3.4.10
+        version: 3.4.17
+      tailwindcss-animate:
+        specifier: ^1.0.7
+        version: 1.0.7(tailwindcss@3.4.17)
       typescript:
         specifier: ^5.5.4
         version: 5.9.2

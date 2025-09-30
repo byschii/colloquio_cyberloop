@@ -1,8 +1,8 @@
 "use client"
 
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Input } from "@/components/ui/input"
+import { Button } from "@repo/ui"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@repo/ui"
+import { Input } from "@repo/ui"
 import { atom, useAtom } from "jotai"
 
 
