@@ -47,6 +47,10 @@ export default function Home() {
     setTodos(todos.filter(todo => todo.id !== id))
   }
 
+  const clearAllTodos = () => {
+    setTodos([])
+  }
+
   return (
     <main className="flex min-h-screen flex-col items-center justify-center p-24">
       <Card className="w-full max-w-md">
@@ -118,6 +122,16 @@ export default function Home() {
               </div>
             )}
           </div>
+
+          {todos.length > 0 && (
+            <Button
+              variant="destructive"
+              onClick={clearAllTodos}
+              className="w-full"
+            >
+              Clear All Tasks
+            </Button>
+          )}
         </CardContent>
       </Card>
     </main>
